@@ -21,4 +21,39 @@ Create the Role for EKS cluster
 
  Create the EKS Cluster
  
- 6.
+ 6. Go to the EKS and create the cluster with eks cluster and security group which we created using cloudformation
+
+SetUP Machine to access EKS cluster and nodes
+
+
+
+7. Install the aws-iam-authenticator. Download aws-iam-authenticator on linux machine using below command
+
+ref link : https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+
+      curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/aws-iam-authenticator
+
+
+8.Apply execute permissions to the binary.
+
+     chmod +x ./aws-iam-authenticator
+     
+9.Copy the binary to a folder in your $PATH. We recommend creating a $HOME/bin/aws-iam-authenticator and ensuring that $HOME/bin comes first in your $PATH.
+
+     mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
+     
+10.Install the kubectl. Dowload the kubectl
+
+Reference Link :https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+     curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl
+
+
+11. Apply execute permissions to the binary.
+
+        chmod +x ./kubectl
+      
+12.Copy the binary to a folder in your PATH. If you have already installed a version of kubectl , then we recommend creating a $HOME/bin/kubectl and ensuring that $HOME/bin comes first in your $PATH.
+
+
+        mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
