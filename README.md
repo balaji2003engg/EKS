@@ -26,3 +26,8 @@ Reference Link :https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl
 
 
         mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+        
+  #Create the EKS
+  
+  eksctl create cluster -f createcluster.yaml
+        
