@@ -6,7 +6,7 @@ Create VPC for EKS
 
 REference link: https://docs.aws.amazon.com/eks/latest/userguide/create-public-private-vpc.html
 
-2. Go to the cloudformation and create the slack 
+2. Go to the cloudformation and create the stack 
 
 3. Provide the below Amazon S3 URL in the template session
 
