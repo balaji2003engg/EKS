@@ -2,7 +2,13 @@
 
 kubectl create -f deployment.yml
 
-    kubectl get deployment
+Get the deployment info
+ 
+        kubectl get deployment 
+        
+ Detail information about deployment
+ 
+     kubectl describe deployment nginx-deployment
 
 Update the nginx image with new version 1.19
 
